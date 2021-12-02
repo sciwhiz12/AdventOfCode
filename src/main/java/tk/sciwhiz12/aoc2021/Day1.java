@@ -5,9 +5,7 @@ import com.google.common.collect.EvictingQueue;
 import java.util.EnumMap;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.function.IntConsumer;
-import java.util.function.IntFunction;
 
 public class Day1 {
     public static void main(String[] args) {
