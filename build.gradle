@@ -1,0 +1,13 @@
+plugins {
+    id 'java'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.google.guava:guava:31.0.1-jre"
+}
