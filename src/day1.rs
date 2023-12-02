@@ -36,9 +36,24 @@ pub fn run() {
     for line in &input {
         let line = line.trim();
 
-        let first_digit = convert(forward_regex.captures_iter(line).next().unwrap().get(0).unwrap().as_str()).unwrap();
+        let first_digit = convert(
+            forward_regex
+                .captures_iter(line)
+                .next()
+                .unwrap()
+                .get(0)
+                .unwrap()
+                .as_str(),
+        )
+        .unwrap();
         let reverse = line.chars().rev().collect::<String>();
-        let last_digit_reversed = reverse_regex.captures_iter(&reverse).next().unwrap().get(0).unwrap().as_str();
+        let last_digit_reversed = reverse_regex
+            .captures_iter(&reverse)
+            .next()
+            .unwrap()
+            .get(0)
+            .unwrap()
+            .as_str();
         let last_digit = last_digit_reversed.chars().rev().collect::<String>();
         let last_digit = convert(last_digit.as_str()).unwrap();
 
