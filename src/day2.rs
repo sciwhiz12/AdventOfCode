@@ -33,12 +33,17 @@ pub fn run() {
             let mut blue_cubes = 0;
 
             for cube_count_match in cube_regex.captures_iter(game_set) {
-                let cube_count = cube_count_match.get(1).unwrap().as_str().parse::<u32>().unwrap();
+                let cube_count = cube_count_match
+                    .get(1)
+                    .unwrap()
+                    .as_str()
+                    .parse::<u32>()
+                    .unwrap();
                 match cube_count_match.get(2).unwrap().as_str() {
                     "red" => red_cubes = cube_count,
                     "green" => green_cubes = cube_count,
                     "blue" => blue_cubes = cube_count,
-                    _ => panic!("Unknown cube color")
+                    _ => panic!("Unknown cube color"),
                 }
             }
 
@@ -46,7 +51,10 @@ pub fn run() {
             req_blue_cubes = max(req_blue_cubes, blue_cubes);
             req_green_cubes = max(req_green_cubes, green_cubes);
 
-            if red_cubes > known_red_cubes || blue_cubes > known_blue_cubes || green_cubes > known_green_cubes {
+            if red_cubes > known_red_cubes
+                || blue_cubes > known_blue_cubes
+                || green_cubes > known_green_cubes
+            {
                 possible = false;
             }
         }
