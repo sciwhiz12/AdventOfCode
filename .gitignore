@@ -1,0 +1,6 @@
+/target
+
+/out
+
+# Exclude logs folder, made by the intcode processor
+logs
