@@ -1,4 +1,5 @@
 mod day1;
+mod day10;
 mod day2;
 mod day3;
 mod day4;
@@ -9,7 +10,7 @@ mod day8;
 mod day9;
 
 fn main() {
-    let day: u32 = 9;
+    let day: u32 = 10;
 
     match day {
         1 => day1::run(),
@@ -21,6 +22,7 @@ fn main() {
         7 => day7::run(),
         8 => day8::run(),
         9 => day9::run(),
+        10 => day10::run(),
         _ => {}
     }
 }
