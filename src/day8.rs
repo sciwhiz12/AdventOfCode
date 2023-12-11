@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 use std::fs;
-use std::hash::Hash;
 
 use itertools::Itertools;
 
@@ -26,7 +25,7 @@ pub fn run() {
 
     // PART 1
 
-    let mut followed_instructions = calculate_path(nodes, instructions, "AAA", |x| x == "ZZZ");
+    let followed_instructions = calculate_path(nodes, instructions, "AAA", |x| x == "ZZZ");
     println!(
         "Steps required to reach ZZZ: {}",
         followed_instructions.1.len()
